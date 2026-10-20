@@ -25,7 +25,7 @@
 //     {
 //         points[i] = points[i] + 1;
 //     }
-    
+
 // }
 
 // foreach (int point in points)
@@ -72,21 +72,57 @@
 // {
 //     System.Console.WriteLine(slot);
 // }
-int[] GenerateEvenSlots(int lessonsCount)
-{
-    int[] slots = new int[lessonsCount];
+// int[] GenerateEvenSlots(int lessonsCount)
+// {
+//     int[] slots = new int[lessonsCount];
 
-    for (int i = 0; i < lessonsCount; i++)
+//     for (int i = 0; i < lessonsCount; i++)
+//     {
+//         slots[i] = (i + 1) * 2;
+//     }
+
+//     return slots;
+// }
+
+// int[] slots = GenerateEvenSlots(6);
+
+// foreach (int slot in slots)
+// {
+//     System.Console.WriteLine(slot);
+// }
+
+// int[] grades = { 4, 5, 3, 5, 4, 2 };
+// Array.Sort(grades);
+
+// foreach (int grade in grades)
+// {
+//     System.Console.WriteLine(grade);
+// }
+
+//Вариант A
+// int n = int.Parse(Console.ReadLine());
+// System.Console.WriteLine("Введите число:");
+// int[] grades = new int[n];
+
+// for (int i = 0; i < n; i++)
+// {
+//     grades[i] = i + 1;
+// }
+// foreach (int grade in grades)
+// {
+//     System.Console.WriteLine(grade);
+// }
+
+// Вариант Б
+int[] grades = { -1, 5, 9, -9, 4, 9 };
+for (int i = 0; i <= grades.Length; i++)
+{
+    if (grades[i] < 0)
     {
-        slots[i] = (i + 1) * 2;
+        grades[i] = 0;
     }
-
-    return slots;
 }
-
-int[] slots = GenerateEvenSlots(6);
-
-foreach (int slot in slots)
+foreach (int grade in grades)
 {
-    System.Console.WriteLine(slot);
+    System.Console.WriteLine(grade);
 }
